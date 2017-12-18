@@ -11,28 +11,28 @@ in the seeds.rb file.
 5) Always remember to run ```rails db:migrate``` whenever you make a new migration. Then run ```rails db:seed``` to seed the database so we have some data to work with.
 6) We now need a controller to tell the server what to do whenever a user hits a specified endpoint. Run ```rails generate controller Posts```.
 7) Then, within the newly created controller, add the following method: 
-    ```def index
+  ```def index
     @posts = Post.all()
     render json:{ status: 200, data: @posts }
-  end```
+  end ```
   
 8) Finally, run ```rails server``` and hit ```http://localhost:3000/posts/``` endpoint and the following JSON data should render
  ```{
-status: 200,
-data: [
-{
-id: 1,
-created_at: "2017-12-18T19:52:44.882Z",
-updated_at: "2017-12-18T19:52:44.882Z",
-title: "Hello World!",
-content: "This is our first post!"
-},
-{
-id: 2,
-created_at: "2017-12-18T19:52:44.885Z",
-updated_at: "2017-12-18T19:52:44.885Z",
-title: "Goodbye World!",
-content: "This is our second post!"
-}
-]
-}```
+    status: 200,
+    data: [
+            {
+            id: 1,
+            created_at: "2017-12-18T19:52:44.882Z",
+            updated_at: "2017-12-18T19:52:44.882Z",
+            title: "Hello World!",
+            content: "This is our first post!"
+            },
+            {
+            id: 2,
+            created_at: "2017-12-18T19:52:44.885Z",
+            updated_at: "2017-12-18T19:52:44.885Z",
+            title: "Goodbye World!",
+            content: "This is our second post!"
+            }
+            ]
+   } ```
