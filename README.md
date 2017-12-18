@@ -10,8 +10,8 @@ Steps:
 
 ```posts = Post.create([{title: 'Hello World!', content: 'This is our first post!'}, {title: 'Goodbye World!', content: 'This is our second post!'}])``` 
 
-
 in the seeds.rb file.
+
 5) Always remember to run ```rails db:migrate``` whenever you make a new migration. Then run ```rails db:seed``` to seed the database so we have some data to work with.
 6) We now need a controller to tell the server what to do whenever a user hits a specified endpoint. Run ```rails generate controller Posts```.
 7) Then, within the newly created controller, add the following method: 
@@ -44,4 +44,4 @@ in the seeds.rb file.
             content: "This is our second post!"
             }
             ]
-   } ```
+   }```
