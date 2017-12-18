@@ -20,7 +20,7 @@ in the seeds.rb file.
   ```def index
     @posts = Post.all()
     render json:{ status: 200, data: @posts }
-  end ```
+  end```
   
   
 8) Finally, run ```rails server``` and hit ```http://localhost:3000/posts/``` endpoint and the following JSON data should render
