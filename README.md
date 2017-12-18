@@ -14,12 +14,12 @@ Steps:
 6) We now need a controller to tell the server what to do whenever a user hits a specified endpoint. Run ```rails generate controller Posts```.
 7) Then, within the newly created controller, add the following method: 
 
-  ```
-  def index
-    @posts = Post.all()
-    render json:{ status: 200, data: @posts }
-  end
-  ```
+      ```
+      def index
+        @posts = Post.all()
+        render json:{ status: 200, data: @posts }
+      end
+      ```
    
 8) Finally, run ```rails server``` and hit ```http://localhost:3000/posts/``` endpoint and the following JSON data should render
 
