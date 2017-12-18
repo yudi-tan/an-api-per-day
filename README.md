@@ -22,7 +22,8 @@ in the seeds.rb file.
 8) Finally, run ```rails server``` and hit ```http://localhost:3000/posts/``` endpoint and the following JSON data should render
 
 
-    ```{
+    ```
+    {
     status: 200,
     data: [
             {
@@ -40,4 +41,5 @@ in the seeds.rb file.
             content: "This is our second post!"
             }
             ]
-   }```
+   }
+   ```
