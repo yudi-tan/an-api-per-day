@@ -55,7 +55,7 @@ Steps:
    ```
 
 
-### Day 2 -- Django Rest Framework.
+### Day 2 -- <a name="django">Django Rest Framework.</a>
 ##### Django API: adapted from https://www.youtube.com/watch?v=Yw7gETuRKjw
 Steps:
 1) You should already have Django installed, then install the django rest framework via `pip install djangorestframework`.
