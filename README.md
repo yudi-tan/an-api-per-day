@@ -141,4 +141,4 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 ```
 
 13) Now visit localhost:8000/posts to find your data returned as JSON.
-14) Also, for it to work in production so that other sites can fetch data from this API, you need to enable CORS. To do so, first run `pip install django-cors-headers`, then include 'corsheaders' under INSTALLED_APPS and `'corsheaders.middleware.CorsMiddleware'` under MIDDLEWARE in the settings.py file.
+14) Also, for it to work in production so that other sites can fetch data from this API, you need to enable CORS. To do so, first run `pip install django-cors-headers`, then include 'corsheaders' under INSTALLED_APPS and `'corsheaders.middleware.CorsMiddleware'` under MIDDLEWARE in the settings.py file. Also, add `CORS_ORIGIN_ALLOW_ALL = True` at the bottom of settings.py and you're all set.
