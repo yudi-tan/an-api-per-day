@@ -4,11 +4,10 @@
 Table of contents
 =================
 
-  * [Rails](#gh-md-toc)
-  * [Table of contents](#table-of-contents)
+  * [Day 1 -- Rails](#rails)
+  * [Day 2 -- Django](#django)
 
-
-### Day 1 -- Ruby on Rails.
+### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
 Steps: 
 1) To start a new rails project, ```rails new rails-api --api```
