@@ -1,5 +1,13 @@
 # An API Per Day.
 
+
+Table of contents
+=================
+
+  * [Rails](#gh-md-toc)
+  * [Table of contents](#table-of-contents)
+
+
 ### Day 1 -- Ruby on Rails.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
 Steps: 
@@ -133,3 +141,4 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 ```
 
 13) Now visit localhost:8000/posts to find your data returned as JSON.
+14) Also, for it to work in production so that other sites can fetch data from this API, you need to enable CORS. To do so, first run `pip install django-cors-headers`, then include 'corsheaders' under INSTALLED_APPS and `'corsheaders.middleware.CorsMiddleware'` under MIDDLEWARE in the settings.py file.
