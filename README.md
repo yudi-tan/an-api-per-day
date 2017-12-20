@@ -4,11 +4,12 @@
 Table of contents
 =================
 
-  * [Day 1 -- Rails](#rails) https://medium.com/@tanyudi/an-api-a-day-challenge-day-1-rails-aeea9780898d
-  * [Day 2 -- Django](#django) https://medium.com/@tanyudi/an-api-a-day-challenge-day-2-django-14aaded9cfbb
+  * [Day 1 -- Rails](#rails) 
+  * [Day 2 -- Django](#django) 
 
 ### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
+##### Follow my journey here: https://medium.com/@tanyudi/an-api-a-day-challenge-day-1-rails-aeea9780898d
 Steps: 
 1) To start a new rails project, ```rails new rails-api --api```
 2) Generate a new model via ```rails g model post title:text content:text```
@@ -57,6 +58,7 @@ Steps:
 
 ### Day 2 -- <a name="django">Django Rest Framework.</a>
 ##### Django API: adapted from https://www.youtube.com/watch?v=Yw7gETuRKjw
+##### Follow my journey here https://medium.com/@tanyudi/an-api-a-day-challenge-day-2-django-14aaded9cfbb
 Steps:
 1) You should already have Django installed, then install the django rest framework via `pip install djangorestframework`.
 2) Once installed, initiate a new Django project with `django-admin startproject PROJECTNAMEHERE`.
