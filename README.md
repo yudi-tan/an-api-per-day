@@ -186,5 +186,6 @@ def PostList():
 ```
 
 and replace MONGO_URI's <dbuser> and <dbpassword> with the credentials of your newly created mongoDB collection user.
+ 
 7) Spin up the development server via `FLASK_APP=flaskAPI.py flask run`
 8) Navigate to http://localhost:5000/posts to see your JSON data. 
