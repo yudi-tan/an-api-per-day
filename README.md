@@ -4,8 +4,8 @@
 Table of contents
 =================
 
-  * [Day 1 -- Rails](#rails)
-  * [Day 2 -- Django](#django)
+  * [Day 1 -- Rails](#rails) https://medium.com/@tanyudi/an-api-a-day-challenge-day-1-rails-aeea9780898d
+  * [Day 2 -- Django](#django) https://medium.com/@tanyudi/an-api-a-day-challenge-day-2-django-14aaded9cfbb
 
 ### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
