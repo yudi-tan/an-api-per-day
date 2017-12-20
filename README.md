@@ -6,6 +6,7 @@ Table of contents
 
   * [Day 1 -- Rails](#rails) 
   * [Day 2 -- Django](#django) 
+  * [Day 3 -- Flask](#flask)
 
 ### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
@@ -143,3 +144,47 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 
 13) Now visit localhost:8000/posts to find your data returned as JSON.
 14) Also, for it to work in production so that other sites can fetch data from this API, you need to enable CORS. To do so, first run `pip install django-cors-headers`, then include 'corsheaders' under INSTALLED_APPS and `'corsheaders.middleware.CorsMiddleware'` under MIDDLEWARE in the settings.py file. Also, add `CORS_ORIGIN_ALLOW_ALL = True` at the bottom of settings.py and you're all set.
+
+### Day 3 -- <a name="flask">Flask MicroFramework.</a>
+##### Flask API: adapted from http://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_RESTAPI_with_Flask.php
+##### Follow my journey here https://medium.com/@tanyudi/an-api-a-day-challenge-day-2-django-14aaded9cfbb
+
+Steps:
+1) Install dependencies at http://flask.pocoo.org/ and run `pip install Flask-PyMongo`.
+2) Set up a mLab mongoDB sandbox.
+3) Create a collection within the sandbox and include some documents, formatted as JSON. i.e.
+
+```
+{
+    "title": "Blog Post 1",
+    "content": "This is a test post!"
+}
+```
+
+4) Create a user instance for that particular mongoDB collection.
+5) Then, navigate to a desired directory and create a python file (I named mine flaskAPI.py).
+6) Include the following code:
+
+```
+from flask import Flask, jsonify, request
+from flask_pymongo import PyMongo
+
+app = Flask(__name__)
+app.config['MONGO_DBNAME'] = 'an-api-per-day'
+//this URL is given by mLab and unique to each database, so make sure you look at yours
+app.config['MONGO_URI'] = 'mongodb://<dbuser>:<dbpassword>@ds161016.mlab.com:61016/an-api-per-day' 
+mongo = PyMongo(app)
+
+@app.route('/posts', methods=['GET'])
+def PostList():
+    posts = mongo.db.posts
+    output = []
+    for p in posts.find():
+        output.append({'title': p['title'], 'content': p['content']})
+    return jsonify({'result': output})
+
+```
+
+and replace MONGO_URI's <dbuser> and <dbpassword> with the credentials of your newly created mongoDB collection user.
+7) Spin up the development server via `FLASK_APP=flaskAPI.py flask run`
+8) Navigate to http://localhost:5000/posts to see your JSON data. 
