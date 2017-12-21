@@ -13,8 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/posts/').then((response) => {
-      var data = response.data.map(d => <p key={d.title}> Title - {d.title} <br/> Content - {d.content} </p>);
+    axios.get('http://localhost:5000/posts').then((response) => {
+      var data = response.data.result.map(d => <p key={d.title}> Title - {d.title} <br/> Content - {d.content} </p>);
       this.setState({data});
     })
   }
