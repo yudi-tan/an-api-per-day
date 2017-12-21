@@ -7,6 +7,7 @@ Table of contents
   * [Day 1 -- Rails](#rails) 
   * [Day 2 -- Django](#django) 
   * [Day 3 -- Flask](#flask)
+  * [Day 4 -- Express.js](#express)
 
 ### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
@@ -188,3 +189,45 @@ and replace MONGO_URI's <dbuser> and <dbpassword> with the credentials of your n
  
 7) Spin up the development server via `FLASK_APP=flaskAPI.py flask run`
 8) Navigate to http://localhost:5000/posts to see your JSON data. 
+
+### Day 4 -- <a name="express">Express.js</a>
+##### Express.js API: adapted from https://hackernoon.com/restful-api-design-with-node-js-26ccf66eab09
+##### Follow my journey here 
+Steps:
+1) Install Node.js (https://nodejs.org/en/).
+2) Navigate to desired directory and initiate an NPM project via `npm init`
+3) Install dependencies via `npm install --save express mongoose body-parser`
+4) Create a file named app.js and add the following:
+
+```
+var express = require('express');
+
+var app = express();
+
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds161016.mlab.com:61016/an-api-per-day', {useMongoClient: true});
+
+var schema = new mongoose.Schema({ title: 'string', content: 'string' });
+
+var postsModel = mongoose.model('Post', schema);
+
+app.get('/posts', function(req, res) {
+  postsModel.find({}, function(err, posts) {
+      res.send(posts);
+    })
+});
+
+var server = app.listen(5000, function() {
+  console.log('Express server listening on port ' + 5000);
+});
+
+module.exports = app;
+
+```
+
+5) Run the server via `node app.js` and finally hit up http://localhost:5000/posts to view the JSON data.
