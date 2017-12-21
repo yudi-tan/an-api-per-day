@@ -147,8 +147,7 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 
 ### Day 3 -- <a name="flask">Flask MicroFramework.</a>
 ##### Flask API: adapted from http://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_RESTAPI_with_Flask.php
-##### Follow my journey here https://medium.com/@tanyudi/an-api-a-day-challenge-day-2-django-14aaded9cfbb
-
+##### Follow my journey here https://medium.com/@tanyudi/an-api-a-day-challenge-day-3-flask-9211d8b5d92a
 Steps:
 1) Install dependencies at http://flask.pocoo.org/ and run `pip install Flask-PyMongo`.
 2) Set up a mLab mongoDB sandbox.
