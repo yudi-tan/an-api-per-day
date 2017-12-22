@@ -2,10 +2,6 @@ var express = require('express');
 
 var app = express();
 
-var bodyParser = require('body-parser');
-
-app.use(bodyParser.json());
-
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://mrtanyudi:qazplm@ds161016.mlab.com:61016/an-api-per-day', {useMongoClient: true});
