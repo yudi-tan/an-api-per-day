@@ -192,7 +192,7 @@ and replace MONGO_URI's <dbuser> and <dbpassword> with the credentials of your n
 
 ### Day 4 -- <a name="express">Express.js</a>
 ##### Express.js API: adapted from https://hackernoon.com/restful-api-design-with-node-js-26ccf66eab09
-##### Follow my journey here 
+##### Follow my journey here https://medium.com/@tanyudi/an-api-a-day-challenge-day-4-express-js-f27a7cdb7336
 Steps:
 1) Install Node.js (https://nodejs.org/en/).
 2) Navigate to desired directory and initiate an NPM project via `npm init`
@@ -203,10 +203,6 @@ Steps:
 var express = require('express');
 
 var app = express();
-
-var bodyParser = require('body-parser');
-
-app.use(bodyParser.json());
 
 var mongoose = require('mongoose');
 
