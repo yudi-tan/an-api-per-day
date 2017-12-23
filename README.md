@@ -8,6 +8,7 @@ Table of contents
   * [Day 2 -- Django](#django) 
   * [Day 3 -- Flask](#flask)
   * [Day 4 -- Express.js](#express)
+  * [Day 5 -- AWS Server-less](#serverless)
 
 ### Day 1 -- <a name="rails">Ruby on Rails</a>.
 ##### Rails API: adapted from https://www.valentinog.com/blog/build-super-simple-api-ruby-rails/
@@ -227,3 +228,18 @@ module.exports = app;
 ```
 
 5) Run the server via `node app.js` and finally hit up http://localhost:5000/posts to view the JSON data.
+
+### Day 5 -- <a name="serverless">AWS Server-less Architecture</a>
+##### Server-less API: adapted from https://www.youtube.com/watch?v=CkbkMznVqQk&t=48s
+##### Follow my journey here 
+
+Steps:
+1) Create an AWS Developer Account and login to the AWS Management Console https://us-west-1.console.aws.amazon.com/console/home?region=us-west-1#
+
+2) Search for `Lambda` and `Create Function`.
+3) Create a Lambda Function with default settings.
+4) Now, open a new tab and navigate to AWS Management Console again, and search for API Gateway.
+5) Create a new API with default settings.
+6) Click on Actions -> Create Resource to create a new endpoint by filling in the name and route of your desired endpoint.
+7) Click on the newly created resource and then click on actions -> create method and choose to desired HTTP Action for that route.
+8) Select Lambda Function as `integration type` and choose the region for the lambda function that you had previously created and save.
